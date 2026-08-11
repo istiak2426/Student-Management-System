@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Student Management System - Registry Module
+
+A focused web application built for the PEN Group technical assessment, simulating the core Registry functions of a student management system.
+
+## Table of Contents
+
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Running the Application](#running-the-application)
+- [Core Features & Workflows](#core-features--workflows)
+  - [1. Student Enrollment](#1-student-enrollment)
+  - [2. Fees & Payments](#2-fees--payments)
+  - [3. Assessment Submission](#3-assessment-submission)
+  - [4. Marksheet & Results](#4-marksheet--results)
+- [Key Design Decisions & Edge Cases](#key-design-decisions--edge-cases)
+- [Database Schema Overview](#database-schema-overview)
+- [Demo Data](#demo-data)
+- [Role Separation](#role-separation)
+- [How I Used AI](#how-i-used-ai)
+- [Screenshots](#screenshots)
+
+---
+
+## Technology Stack
+
+| Category | Technology |
+|----------|------------|
+| Framework | Next.js 14+ (App Router) |
+| Database | PostgreSQL |
+| ORM | Prisma |
+| Styling | Tailwind CSS & Shadcn UI |
+| Language | TypeScript |
+| File Uploads | `multer` / server-side handling |
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Node.js** v18 or later
+- **PostgreSQL** (local instance or cloud provider like [Neon](https://neon.tech/) or [Supabase](https://supabase.com/))
+- A code editor (VS Code recommended)
+- **Git** (for cloning the repository)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone [YOUR_REPOSITORY_URL]
+   cd [YOUR_PROJECT_DIRECTORY]
