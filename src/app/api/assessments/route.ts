@@ -1,18 +1,15 @@
-// app/api/assessments/route.ts
-import { NextRequest, NextResponse } from 'next/server';
+// src/app/api/assessments/route.ts
+import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
 
-export async function GET(request: NextRequest) {
+export const dynamic = 'force-dynamic';
+
+export async function GET() {
   try {
-    const { searchParams } = new URL(request.url);
-    const studentId = searchParams.get('studentId');
-
-    const where = studentId ? { studentId } : {};
-
     const assessments = await prisma.assessment.findMany({
-      where,
       include: {
-        student: true, // optional, to get student details
+        submissions: true,
+        marks: true,
       },
       orderBy: { createdAt: 'desc' },
     });
